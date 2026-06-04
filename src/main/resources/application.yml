@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: ite-3rd-ecommerce
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+  datasource:
+    password: ${PASSWORD}
+    url: ${URL}
+    driver-class-name: org.postgresql.Driver
+    username: ${USERNAME}
+server:
+  port: 8090
