@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.engine.internal.Cascade;
 
 import java.util.List;
 
@@ -28,6 +29,9 @@ public class Category {
     @ManyToOne // each category has one parent
     @JoinColumn(name = "parent_id")
     private Category parentCategory;
+
+    @OneToMany(mappedBy = "parentCategory",cascade = CascadeType.REMOVE)
+    private List<Category> childCategories;
 
     @OneToMany(mappedBy = "category")
     private List<Product> products;

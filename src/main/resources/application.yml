@@ -3,7 +3,7 @@ spring:
     name: ite-3rd-ecommerce
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
   datasource:
     password: ${PASSWORD}
     url: ${URL}
