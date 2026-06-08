@@ -76,11 +76,19 @@ public class CategoryServiceImpl implements CategoryService {
         Category category = categoryRepository.findById(id).
                 orElseThrow(()->new ResponseStatusException(HttpStatus.NOT_FOUND,"Category not found with this id."));
         category.setIsDeleted(true);
-        for (Category c : category.getChildCategories()){
-            c.setIsDeleted(true);
-        }
+        softDeleteRecursive(category);
         categoryRepository.save(category);
     }
+    private void softDeleteRecursive(Category category) {
+        category.setIsDeleted(true);
+
+        if (category.getChildCategories() == null) return;
+
+        for (Category child : category.getChildCategories()) {
+            softDeleteRecursive(child);
+        }
+    }
+
 
     @Override
     public List<CategoryResponse> getSubCategories(Integer parentCategoryId) {
