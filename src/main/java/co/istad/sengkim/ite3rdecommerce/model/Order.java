@@ -30,7 +30,7 @@ public class Order {
     @Column(nullable = false)
     private Boolean status;
     @Column(nullable = false)
-    private LocalDateTime ordered_at;
+    private LocalDateTime orderedAt;
     @Column(nullable = false)
     private Boolean isDeleted;
 

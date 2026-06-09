@@ -28,14 +28,14 @@ public class Product {
     @Column(nullable = false)
     private String thumbnail;
     @Column(nullable = false)
-    private Integer unit_price;
+    private Integer unitPrice;
     @Column(nullable = false)
     private Integer qty;
 
     @Column(nullable = false)
-    private Boolean is_available;
+    private Boolean isAvailable;
     @Column(nullable = false)
-    private Boolean is_deleted;
+    private Boolean isDeleted;
 
     @ManyToOne
     private Category category;
