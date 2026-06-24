@@ -1,6 +1,5 @@
-package co.istad.sengkim.ite3rdecommerce.repository;
+package co.istad.sengkim.ite3rdecommerce.features.order;
 
-import co.istad.sengkim.ite3rdecommerce.model.Order;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.UUID;

@@ -1,8 +1,7 @@
-package co.istad.sengkim.ite3rdecommerce.mapper;
+package co.istad.sengkim.ite3rdecommerce.features.category;
 
-import co.istad.sengkim.ite3rdecommerce.dto.CategoryResponse;
-import co.istad.sengkim.ite3rdecommerce.dto.CreateCategoryRequest;
-import co.istad.sengkim.ite3rdecommerce.model.Category;
+import co.istad.sengkim.ite3rdecommerce.features.category.dto.CategoryResponse;
+import co.istad.sengkim.ite3rdecommerce.features.category.dto.CreateCategoryRequest;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 

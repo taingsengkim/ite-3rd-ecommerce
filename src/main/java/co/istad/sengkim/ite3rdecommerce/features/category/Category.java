@@ -1,10 +1,10 @@
-package co.istad.sengkim.ite3rdecommerce.model;
+package co.istad.sengkim.ite3rdecommerce.features.category;
 
+import co.istad.sengkim.ite3rdecommerce.features.product.Product;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.hibernate.engine.internal.Cascade;
 
 import java.util.List;
 

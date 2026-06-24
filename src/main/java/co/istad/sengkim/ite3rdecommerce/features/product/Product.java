@@ -1,11 +1,11 @@
-package co.istad.sengkim.ite3rdecommerce.model;
+package co.istad.sengkim.ite3rdecommerce.features.product;
 
 
+import co.istad.sengkim.ite3rdecommerce.features.category.Category;
+import co.istad.sengkim.ite3rdecommerce.features.order.orderline.OrderLine;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-import org.hibernate.annotations.AnyDiscriminatorImplicitValues;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
 
 import java.util.List;
 

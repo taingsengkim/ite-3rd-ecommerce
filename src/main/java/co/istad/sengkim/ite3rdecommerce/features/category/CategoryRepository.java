@@ -1,6 +1,5 @@
-package co.istad.sengkim.ite3rdecommerce.repository;
+package co.istad.sengkim.ite3rdecommerce.features.category;
 
-import co.istad.sengkim.ite3rdecommerce.model.Category;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import org.springframework.data.domain.Page;

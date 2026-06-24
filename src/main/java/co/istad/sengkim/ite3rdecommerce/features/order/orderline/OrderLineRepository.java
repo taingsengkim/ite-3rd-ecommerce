@@ -1,6 +1,5 @@
-package co.istad.sengkim.ite3rdecommerce.repository;
+package co.istad.sengkim.ite3rdecommerce.features.order.orderline;
 
-import co.istad.sengkim.ite3rdecommerce.model.OrderLine;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface OrderLineRepository extends JpaRepository<OrderLine,Integer> {

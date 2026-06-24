@@ -1,15 +1,11 @@
-package co.istad.sengkim.ite3rdecommerce.controller;
+package co.istad.sengkim.ite3rdecommerce.features.category;
 
 
-import co.istad.sengkim.ite3rdecommerce.dto.CategoryResponse;
-import co.istad.sengkim.ite3rdecommerce.dto.CreateCategoryRequest;
-import co.istad.sengkim.ite3rdecommerce.dto.UpdateCategoryRequest;
-import co.istad.sengkim.ite3rdecommerce.service.CategoryService;
+import co.istad.sengkim.ite3rdecommerce.features.category.dto.CategoryResponse;
+import co.istad.sengkim.ite3rdecommerce.features.category.dto.CreateCategoryRequest;
+import co.istad.sengkim.ite3rdecommerce.features.category.dto.UpdateCategoryRequest;
 import jakarta.validation.Valid;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -31,7 +27,7 @@ public class CategoryController {
 
 
     @GetMapping("/{id}")
-    public CategoryResponse getCategoryById(@PathVariable Integer id){
+     public CategoryResponse getCategoryById(@PathVariable Integer id){
         return categoryService.getCategoryById(id);
     }
 

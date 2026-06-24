@@ -1,9 +1,8 @@
-package co.istad.sengkim.ite3rdecommerce.service;
+package co.istad.sengkim.ite3rdecommerce.features.category;
 
-import co.istad.sengkim.ite3rdecommerce.dto.CategoryResponse;
-import co.istad.sengkim.ite3rdecommerce.dto.CreateCategoryRequest;
-import co.istad.sengkim.ite3rdecommerce.dto.UpdateCategoryRequest;
-import org.hibernate.boot.model.naming.ImplicitCollectionTableNameSource;
+import co.istad.sengkim.ite3rdecommerce.features.category.dto.CategoryResponse;
+import co.istad.sengkim.ite3rdecommerce.features.category.dto.CreateCategoryRequest;
+import co.istad.sengkim.ite3rdecommerce.features.category.dto.UpdateCategoryRequest;
 import org.springframework.data.domain.Page;
 
 import java.util.List;

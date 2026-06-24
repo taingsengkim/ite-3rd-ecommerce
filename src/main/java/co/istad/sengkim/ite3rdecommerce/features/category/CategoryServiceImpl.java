@@ -1,18 +1,13 @@
-package co.istad.sengkim.ite3rdecommerce.service.impl;
+package co.istad.sengkim.ite3rdecommerce.features.category;
 
-import co.istad.sengkim.ite3rdecommerce.dto.CategoryResponse;
-import co.istad.sengkim.ite3rdecommerce.dto.CreateCategoryRequest;
-import co.istad.sengkim.ite3rdecommerce.dto.UpdateCategoryRequest;
-import co.istad.sengkim.ite3rdecommerce.mapper.CategoryMapper;
-import co.istad.sengkim.ite3rdecommerce.model.Category;
-import co.istad.sengkim.ite3rdecommerce.repository.CategoryRepository;
-import co.istad.sengkim.ite3rdecommerce.service.CategoryService;
+import co.istad.sengkim.ite3rdecommerce.features.category.dto.CategoryResponse;
+import co.istad.sengkim.ite3rdecommerce.features.category.dto.CreateCategoryRequest;
+import co.istad.sengkim.ite3rdecommerce.features.category.dto.UpdateCategoryRequest;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 

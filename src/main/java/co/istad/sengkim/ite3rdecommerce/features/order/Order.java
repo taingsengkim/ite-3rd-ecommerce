@@ -1,13 +1,12 @@
-package co.istad.sengkim.ite3rdecommerce.model;
+package co.istad.sengkim.ite3rdecommerce.features.order;
 
+import co.istad.sengkim.ite3rdecommerce.features.order.orderline.OrderLine;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.springframework.data.repository.core.support.IncompleteRepositoryCompositionException;
 
 import java.time.LocalDateTime;
-import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 

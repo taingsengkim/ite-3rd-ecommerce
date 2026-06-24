@@ -1,6 +1,5 @@
-package co.istad.sengkim.ite3rdecommerce.dto;
+package co.istad.sengkim.ite3rdecommerce.features.category.dto;
 
-import co.istad.sengkim.ite3rdecommerce.model.Category;
 import lombok.Builder;
 
 @Builder

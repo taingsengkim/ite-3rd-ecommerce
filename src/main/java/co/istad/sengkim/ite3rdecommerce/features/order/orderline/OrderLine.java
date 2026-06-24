@@ -1,5 +1,7 @@
-package co.istad.sengkim.ite3rdecommerce.model;
+package co.istad.sengkim.ite3rdecommerce.features.order.orderline;
 
+import co.istad.sengkim.ite3rdecommerce.features.order.Order;
+import co.istad.sengkim.ite3rdecommerce.features.product.Product;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

@@ -10,4 +10,8 @@ spring:
     driver-class-name: org.postgresql.Driver
     username: ${USERNAME}
 server:
-  port: 8090
+  port: 8098
+file:
+  client-path: /file
+  storage-location: D:\\ITE-File Upload Testing\\
+  base-URI: http://localhost:${server.port}${file.client-path}/

@@ -1,4 +1,4 @@
-package co.istad.sengkim.ite3rdecommerce.dto;
+package co.istad.sengkim.ite3rdecommerce.features.category.dto;
 
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.NotBlank;
