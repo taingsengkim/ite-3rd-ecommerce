@@ -27,7 +27,7 @@ public class Order {
     private Float discount;
     private String remark;
     @Column(nullable = false)
-    private Boolean status; //PENDING
+    private Boolean status; //Payment
     @Column(nullable = false)
     private LocalDateTime orderedAt;
     @Column(nullable = false)
