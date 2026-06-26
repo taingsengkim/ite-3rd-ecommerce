@@ -28,7 +28,7 @@ public class Product {
     @Column(nullable = false)
     private String thumbnail;
     @Column(nullable = false)
-    private Integer unitPrice;
+    private Double unitPrice;
     @Column(nullable = false)
     private Integer qty;
 

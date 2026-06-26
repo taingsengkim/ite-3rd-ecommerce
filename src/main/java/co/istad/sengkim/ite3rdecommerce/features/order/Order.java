@@ -27,13 +27,13 @@ public class Order {
     private Float discount;
     private String remark;
     @Column(nullable = false)
-    private Boolean status;
+    private Boolean status; //PENDING
     @Column(nullable = false)
     private LocalDateTime orderedAt;
     @Column(nullable = false)
     private Boolean isDeleted;
 
 
-    @OneToMany(mappedBy = "order")
+    @OneToMany(mappedBy = "order",cascade = CascadeType.ALL)
     private List<OrderLine> orderLines;
 }

@@ -1,7 +1,9 @@
 package co.istad.sengkim.ite3rdecommerce.features.file;
 
 import co.istad.sengkim.ite3rdecommerce.features.file.dto.FileUploadResponse;
+import jakarta.servlet.ServletRequest;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
@@ -33,5 +35,17 @@ public class FileUploadController {
     public void deleteByName(@PathVariable String name){
         fileUploadService.delete(name);
     }
+
+    @GetMapping
+    public Page<FileUploadResponse> getAll(
+            @RequestParam(defaultValue = "0",required = false) int pageNumber,
+            @RequestParam(defaultValue = "25",required = false) int pageSize, ServletRequest servletRequest){
+        return fileUploadService.findAll(pageNumber,pageSize);
+    }
+    @GetMapping("/{name}")
+    public FileUploadResponse getByName(@PathVariable String name){
+        return fileUploadService.findByName(name);
+    }
+
 
 }
