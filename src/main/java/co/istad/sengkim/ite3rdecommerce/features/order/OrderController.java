@@ -4,6 +4,7 @@ import co.istad.sengkim.ite3rdecommerce.features.order.dto.CreateOrderRequest;
 import co.istad.sengkim.ite3rdecommerce.features.order.dto.OrderResponse;
 import co.istad.sengkim.ite3rdecommerce.features.order.dto.PaymentStatusRequest;
 import co.istad.sengkim.ite3rdecommerce.features.order.dto.SoftDeleteOrderRequest;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.hibernate.boot.model.naming.ImplicitCollectionTableNameSource;
 import org.springframework.data.domain.Page;
@@ -19,7 +20,7 @@ public class OrderController {
     private final OrderService orderService;
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public OrderResponse createNew(@RequestBody CreateOrderRequest createOrderRequest){
+    public OrderResponse createNew(@Valid @RequestBody CreateOrderRequest createOrderRequest){
         return orderService.createNew(createOrderRequest);
     }
 
@@ -35,7 +36,7 @@ public class OrderController {
 
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @PutMapping("/{uuid}/soft-delete")
-    public void softDelete(@PathVariable UUID uuid, @RequestBody SoftDeleteOrderRequest softDeleteOrderRequest){
+    public void softDelete(@PathVariable UUID uuid,@Valid  @RequestBody SoftDeleteOrderRequest softDeleteOrderRequest){
         orderService.softDelete(uuid,softDeleteOrderRequest);
     }
 
@@ -47,7 +48,7 @@ public class OrderController {
 
     @ResponseStatus(HttpStatus.OK)
     @PutMapping("/{uuid}/status")
-    public void setPaymentStatus(@PathVariable UUID uuid, @RequestBody PaymentStatusRequest paymentStatusRequest){
+    public void setPaymentStatus(@PathVariable UUID uuid,@Valid @RequestBody PaymentStatusRequest paymentStatusRequest){
         orderService.changePaymentStatus(uuid,paymentStatusRequest);
     }
 
