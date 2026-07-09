@@ -68,7 +68,6 @@ public class AuthServiceImpl implements AuthService {
                 UserRepresentation createdUser = keycloak.realm(props.getTargetRealm()).users()
                         .search(userRepresentation.getUsername())
                         .getFirst();
-                log.info("Created user : {}", createdUser);
 
                 UserResource userResourceSet = keycloak.realm(props.getTargetRealm())
                         .users().get(createdUser.getId());
@@ -76,7 +75,9 @@ public class AuthServiceImpl implements AuthService {
 
                 RoleRepresentation roleUser = keycloak.realm(props.getTargetRealm())
                         .roles().get(RoleEnum.USER.name()).toRepresentation();
-                userResourceSet.roles().realmLevel().add(List.of(roleUser));
+                RoleRepresentation roleCustomer = keycloak.realm(props.getTargetRealm())
+                        .roles().get(RoleEnum.CUSTOMER.name()).toRepresentation();
+                userResourceSet.roles().realmLevel().add(List.of(roleUser,roleCustomer));
                 UserProfile userProfile = new UserProfile();
                 userProfile.setUserId(createdUser.getId());
                 userProfileRepository.save(userProfile);
