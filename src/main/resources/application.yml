@@ -1,4 +1,9 @@
 spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:9999/realms/ite-ecommerce
   application:
     name: ite-3rd-ecommerce
   jpa:
@@ -19,3 +24,9 @@ file:
   client-path: /file
   storage-location: D:\\ITE-File Upload Testing\\
   base-URI: http://localhost:${server.port}${file.client-path}/
+keycloak:
+  server-url: http://localhost:9999
+  client-id: ite-ecommerce-spring-api
+  client-secret: mXtitFVmgfLM1Fbqphs9Q7fGr4I3vEN8
+  realm: ite-ecommerce
+  target-realm: ite-ecommerce

@@ -6,6 +6,7 @@ import co.istad.sengkim.ite3rdecommerce.features.order.dto.SoftDeleteOrderReques
 import co.istad.sengkim.ite3rdecommerce.features.order.orderline.OrderLine;
 import co.istad.sengkim.ite3rdecommerce.features.product.Product;
 import co.istad.sengkim.ite3rdecommerce.features.product.ProductRepository;
+import co.istad.sengkim.ite3rdecommerce.security.AuthUtils;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -52,7 +53,8 @@ public class OrderServiceImpl implements OrderService{
          if(!isValidTrue){
              throw new ResponseStatusException(HttpStatus.BAD_REQUEST,"Invalid order line.");
          }
-        order.setCustomerId("ISTAD");
+
+        order.setCustomerId(AuthUtils.extractUserId());
         order.setOrderLines(orderLines);
         order.setIsDeleted(false);
         order.setOrderedAt(LocalDateTime.now());
